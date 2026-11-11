@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặng Thùy Lâm — Personal Space</title>
+    <!-- Google Fonts: Cormorant Garamond (Serif) & Montserrat (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fcfbf9;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --accent-color: #8c7a6b;
+            --border-color: #e5e2dd;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 3rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .brand {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 6rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+        }
+
+        .about-meta {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 2;
+        }
+
+        .about-bio {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+
+        /* Interests */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .interest-card {
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            background: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+        }
+
+        .interest-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .interest-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contact & CTA */
+        .contact-section {
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .btn-zalo {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--text-primary);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-zalo:hover {
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="brand">ĐẶNG THÙY LÂM</div>
+            <nav>
+                <a href="#about">Về Tôi</a>
+                <a href="#interests">Sở Thích</a>
+                <a href="#contact">Liên Hệ</a>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero">
+            <h1>Elegance in Simplicity</h1>
+            <p>Học sinh Lớp 10L Chuyên Lý — THPT Chuyên Bến Tre</p>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <h2 class="section-title">Hồ Sơ Cá Nhân</h2>
+            <div class="about-grid">
+                <div class="about-meta">
+                    <p><strong>Họ và tên:</strong> Đặng Thùy Lâm</p>
+                    <p><strong>Lớp:</strong> 10L Chuyên Lý</p>
+                    <p><strong>Trường:</strong> THPT Chuyên Bến Tre</p>
+                    <p><strong>Định hướng:</strong> Mạnh mẽ • Tự tin • Cầu tiến</p>
+                </div>
+                <div class="about-bio">
+                    <p>Chào mừng bạn đến với không gian cá nhân của tôi. Là một học sinh chuyên Lý, tôi theo đuổi sự tư duy logic nhưng luôn nuôi dưỡng tâm hồn nghệ thuật qua âm nhạc, điện ảnh và hành trình khám phá văn hóa ẩm thực đa dạng trên toàn thế giới.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests -->
+        <section id="interests">
+            <h2 class="section-title">Góc Lối Sống</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <h3>Âm Nhạc & Phim</h3>
+                    <p>Thư giãn và tìm kiếm cảm hứng sáng tạo qua những giai điệu và thước phim tinh tế.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Ẩm Thực Quốc Tế</h3>
+                    <p>Trải nghiệm và khám phá sự phong phú trong hương vị văn hóa các nước.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Du Lịch Văn Hóa</h3>
+                    <p>Mở rộng thế giới quan qua những chuyến đi trải nghiệm kiến trúc và đời sống.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Kết Nối</h2>
+            <p style="color: var(--text-secondary);">Mọi trao đổi công việc và học tập vui lòng liên hệ qua Zalo</p>
+            <a href="https://zalo.me/0945724728" target="_blank" class="btn-zalo">Liên Hệ Zalo: 0945 724 728</a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 ĐẶNG THÙY LÂM. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
