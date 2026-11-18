@@ -75,8 +75,21 @@
 
         /* Hero Section */
         .hero {
-            padding: 8rem 0 6rem;
+            padding: 6rem 0 6rem;
             text-align: center;
+        }
+
+        /* CSS MỚI CHO ẢNH ĐẠI DIỆN */
+        .hero-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+            padding: 5px;
+            background-color: #ffffff;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
         }
 
         .hero h1 {
@@ -164,6 +177,30 @@
             padding: 6rem 0;
         }
 
+        /* CSS MỚI CHO MÃ QR */
+        .qr-wrapper {
+            margin: 2rem auto 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .qr-code {
+            width: 170px;
+            height: 170px;
+            object-fit: contain;
+            padding: 10px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+        }
+
+        .qr-caption {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
         .btn-zalo {
             display: inline-block;
             margin-top: 2rem;
@@ -212,6 +249,9 @@
 
         <!-- Hero -->
         <section class="hero">
+            <!-- VỊ TRÍ CHÈN ẢNH ĐẠI DIỆN -->
+            <img src="images/avatar.jpg" alt="Đặng Thùy Lâm" class="hero-avatar">
+            
             <h1>Elegance in Simplicity</h1>
             <p>Học sinh Lớp 10L Chuyên Lý — THPT Chuyên Bến Tre</p>
         </section>
@@ -255,6 +295,13 @@
         <section id="contact" class="contact-section">
             <h2 class="section-title">Kết Nối</h2>
             <p style="color: var(--text-secondary);">Mọi trao đổi công việc và học tập vui lòng liên hệ qua Zalo</p>
+            
+            <!-- VỊ TRÍ CHÈN MÃ QR -->
+            <div class="qr-wrapper">
+                <img src="images/qr-zalo.png" alt="Mã QR Zalo Đặng Thùy Lâm" class="qr-code">
+                <span class="qr-caption">Quét mã QR để kết nối nhanh</span>
+            </div>
+
             <a href="https://zalo.me/0945724728" target="_blank" class="btn-zalo">Liên Hệ Zalo: 0945 724 728</a>
         </section>
 
